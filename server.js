@@ -198,7 +198,7 @@ var type=req.params.type.toLowerCase();
 	}
 	
 	else if(type==="cermony"){
-	   cars.find({car_for_rent:"yes",rentType:"cermony"},function(err,cermonyRent){
+	   cars.find({car_for_rent:"yes",rentType:"ceremony"},function(err,cermonyRent){
 		  if(err || !cermonyRent){
 			req.flash("error",err.message);
 		  } else {
