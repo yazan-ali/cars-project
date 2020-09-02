@@ -9,8 +9,9 @@ var express                =require("express"),
     comments               =require("./models/comment"),
 	passport               =require("passport"),
 	passportLocal          =require("passport-local"),
-	passportMongoose       =require("passport-local-mongoose");
-
+	passportMongoose       =require("passport-local-mongoose"),
+    session                = require('express-session'),
+    MemoryStore            = require('memorystore')(session);
 
 var paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Congue quisque egestas diam in arcu cursus euismod. At risus viverra adipiscing at in Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Congue quisque egestas diam in arcu cursus euismod. At risus viverra."
 
