@@ -14,9 +14,11 @@ var express                =require("express"),
 
 var paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Congue quisque egestas diam in arcu cursus euismod. At risus viverra adipiscing at in Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Congue quisque egestas diam in arcu cursus euismod. At risus viverra."
 
-mongoose.set('useNewUrlParser',true);
-mongoose.set('useUnifiedTopology',true);
-mongoose.connect("mongodb+srv://yazan1ali:yazan154ali>@cluster1.x9sw4.mongodb.net/<dbname?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://yazan1ali:yazan154ali@cluster1-x9sw4.mongodb.net/<dbname>?retryWrites=true&w=majority",{
+  useUnifiedTopology:true,
+  useNewUrlParser:true,
+  useCreateIndex:true
+});
 
 
 
