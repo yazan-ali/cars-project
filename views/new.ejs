@@ -1,0 +1,47 @@
+<%- include("./partials/header") %>
+
+<div class="container">
+    <h1>Add New Car</h1>
+    
+	<div class="form">
+		<form action="/cars" method="POST">
+	<div class="form-group">
+		<input class="form-control" type="text" name="car_name" placeholder="car name">
+	</div>
+	<div class="form-group">
+		<input class="form-control" type="text" name="car_image" placeholder="car image url">
+	</div>	
+	<div class="form-group">
+		<input class="form-control" type="text" name="car_year" placeholder="car year">	
+	</div>	
+	<div class="form-group">
+
+		<input class="form-control" type="text" name="car_color" placeholder="car color">	
+	</div>	
+	<div class="form-group">
+		<input class="form-control" type="text" name="car_type" placeholder="car type">	
+	</div>	
+	<div class="form-group">
+		<input class="form-control" type="text" name="car_price" placeholder="car price">
+	</div>	
+	<div class="form-group">
+		<input class="form-control" type="text" name="car_status"     
+			   placeholder="car status">
+	</div>
+	<div class="form-group">
+		<input class="form-control" type="text" name="car_description" placeholder="about this car">
+	</div>		
+	<div class="form-group">
+		<input class="form-control" type="text" name="forRent" placeholder="is the car for rent?">
+	</div>
+	<div class="form-group">
+		<input class="form-control" type="text" name="rentType" placeholder="type of rent?">
+	</div>
+    <button class="btn btn-outline-primary">Add Car</button>
+</form>
+		<a class="float-right" href="/cars">Go Back</a>
+	</div>
+	
+</div>
+
+<%- include("./partials/footer") %>

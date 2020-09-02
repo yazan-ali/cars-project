@@ -1,0 +1,93 @@
+body{
+font-family:roboto; 
+font-weight:500; 
+}
+.navbar{
+background:#02022C;
+color:white;
+}
+.navbar-right a{
+color:white;
+padding:10px;
+}
+#mainNav .nav-link{
+color:white;		
+}
+#mainNav .nav-link:hover{
+background:white;
+color:#02022C;
+transition:background 1s;
+border-radius:10px; }
+.fa-search{
+padding:10px;
+color:white; 	
+}
+.fa-facebook{
+padding:10px;
+color:white;  	
+}
+.fa-instagram{
+padding:10px; 
+color:white;  		
+}
+.carImg{
+height:200px;
+}
+.carShowForm{
+height:100%;
+}
+/* .infoCard{
+margin-left:500px;	
+} */
+/* p{
+font-weight:500; 	
+}
+.p{
+font-weight:400; 		
+font-size:25px;
+border-bottom:2px solid gray;
+padding-bottom:20px;   	
+} */
+.navbar-brand{
+color:white;
+}
+.navbar-brand:hover{	
+color:white;
+}
+.displayNone{
+display:none;	
+}
+.card:hover{
+background:#E7E7EC;
+}
+.displayNone{
+display:none;	
+}
+.days{
+width:50%; 	
+}
+.displayNoneRent{
+display:none;	
+}
+.error{
+color:#CF302B;
+display:none;	
+}
+.editBtn{
+color:#ffc107;
+border:solid #ffc107 1px;
+}
+.editBtn:hover{
+color:white;
+background:#ffc107
+}
+.deleteForm{
+display:inline;
+}
+.centerH1{
+text-align:center;
+margin-bottom:100px;	
+}
+.flash{
+margin-top:65px;		
+}

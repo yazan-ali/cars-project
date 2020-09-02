@@ -1,0 +1,60 @@
+<%- include("./partials/header") %>
+	
+	<div class="jumbotron">
+  	 <div class="text-center mt-5">
+  	 	<h1><%= header %></h1>
+  	<p class="p d-none d-md-block"><%= paragraph %></p>
+    
+  	<img class="mt-3 img-fluid" src="https://www.topgear.com/sites/default/files/images/cars-road-test/2020/02/61bf9b9da41043d53749c6fd114b4f98/large-34442-mercedes-amga35saloon.jpg">
+  	 </div>
+		<h3 class="my-5">Choose your car</h3>
+			<% if(currentUser && currentUser.dataEntry==="yes") { %>
+		<a href="/cars/new" class="btn btn-lg btn-secondary mb-2">Add new car</a>
+		<% } %>
+<!--   	dorp down menu  --> 
+   <div class="dropdown mb-2">
+  <button class="btn btn-lg btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Sort By
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="/new-cars">New Cars</a>
+    <a class="dropdown-item" href="/used-cars">Used Cars</a>
+  </div>
+</div>
+
+<!--   	dorp down menu  -->
+		
+<!-- cars cards -->
+	<div class="row" style="display:flex; flex-wrap:wrap;">
+		<% cars.forEach(function(cars){ %>
+		  <div class="col-md-3 col-sm-6 mb-3 ">
+			 <div class="card">
+               <img class="carImg" src="<%= cars.image %>" 
+					class="card-img-top" alt="...">
+                     <div class="card-body">
+                     <h5 class="card-title"><%= cars.name %></h5>
+                     <p class="card-text">Year:<%= cars.year %></p>
+                     <p class="card-text">Color:<%= cars.color %></p>
+                     <p class="card-text">Control Type:<%= cars.type %></p>
+                     <p class="card-text">Price:<%= cars.price %></p>
+                     <p class="card-text">Status:<%= cars.status %></p>
+					 <a href="cars/<%= cars._id %>" class="btn btn-outline-primary">More Info</a>
+
+  </div>
+</div>
+		  </div>
+	    <% }); %>
+		
+	</div>
+		
+  	 <div>
+  
+</div>
+	</div>
+
+
+
+
+
+
+<%- include("./partials/footer") %>

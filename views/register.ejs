@@ -1,0 +1,40 @@
+<%- include("./partials/header") %>
+<div class=" singForm">
+	<h1>Sign Up</h1>
+
+	
+	<div class="row">
+	<div class="col-md-6">
+	<form action="/register" method="POST">
+		  <div class="form-group">
+    <label for="first">First Name</label>
+    <input type="text" class="form-control" name="name[first]" placeholder="first name" id="first" aria-describedby="emailHelp" required>
+  </div>
+  <div class="form-group">
+    <label for="last">Last Name</label>
+    <input type="text" class="form-control" name="name[last]" placeholder="last name" id="last" required>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" name="username" placeholder="email" aria-describedby="emailHelp" required>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" name="password" placeholder="password" id="exampleInputPassword1" required>
+  </div>
+	<div style="display:none" class="form-group">
+	    <input class="form-control" type="text" name="dataEntry" value="no" required>
+	</div>
+  <button type="submit" class="btn btn-primary">Sign in</button>
+</form>
+</div>
+	</div>
+</div>
+
+	
+	
+
+
+
+
+<%- include("./partials/footer") %>
