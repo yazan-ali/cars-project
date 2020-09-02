@@ -21,7 +21,13 @@ mongoose.connect("mongodb+srv://yazan1ali:yazan154ali@cluster1-x9sw4.mongodb.net
   useCreateIndex:true
 });
 
-
+app.use(session({
+  cookie: { maxAge: 86400000 },
+  store: new MemoryStore({
+    checkPeriod: 86400000 // prune expired entries every 24h
+  }),
+  secret: 'keyboard cat'
+}))
 
 app.use(bodyParser.urlencoded({extened:true}));
 app.set("view engine","ejs");
