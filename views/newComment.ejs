@@ -1,21 +1,21 @@
 <%- include("./partials/header"); %>
 
 <div class="container">
-		
-		<h1 style="text-align:center">Add New Comment to <%= car.name %></h1>
-<div style="width:400px; margin:20px auto">
-			<form action="/cars/<%= car._id %>/comment" method="POST">
-				<div class="form-group">
-				 <input class="form-control" type="text" name="comment[text]" placeholder="text">	 
-				</div>
-				
-				
-      <button class="btn  btn-primary btn-block">Submit</button>	
-</form>
-	<a href="/cars/<%= car.id %>">Go Back</a>
 
-		</div>
-	
+	<h1 style="text-align:center">Add New Comment to <%= car.name %></h1>
+	<div style="width:400px; margin:20px auto">
+		<form action="/cars/<%= car._id %>/comment" method="POST">
+			<div class="form-group">
+				<input class="form-control" type="text" name="comment[text]" placeholder="text">
+			</div>
+
+
+			<button class="btn  btn-primary btn-block">Submit</button>
+		</form>
+		<a href="/cars/<%= car.id %>">Go Back</a>
+
+	</div>
+
 </div>
 
 

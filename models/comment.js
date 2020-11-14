@@ -7,10 +7,10 @@ var commentSchema = mongoose.Schema({
             type: mongoose.Schema.Types.ObjectId,
             ref: "User"
         },
-        name:{
-			first:String,
-			last:String
-		}
+        name: {
+            first: String,
+            last: String
+        }
     }
 });
 

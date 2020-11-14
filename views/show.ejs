@@ -1,73 +1,73 @@
 <%- include("./partials/header"); %>
 
 <div class="container">
-	
-<h1><%= car.name %></h1>
 
-	
-	<div class="row">
-	<div class=" card mb-3 mt-3" style="width: 900px; margin:auto">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <img src="<%= car.image %>" class="carShowForm card-img" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">About this car:</h5>
-        <p class="card-text"><%= car.description %></p>
+  <h1><%= car.name %></h1>
+
+
+  <div class="row">
+    <div class=" card mb-3 mt-3" style="width: 900px; margin:auto">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="<%= car.image %>" class="carShowForm card-img" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">About this car:</h5>
+            <p class="card-text"><%= car.description %></p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-	
-			<div class="card infoCard" style="width:900px; margin:auto">
-  <div class="card-header">
-    Car Informaiton 
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Model Year:<%= car.year %></li>
-    <li class="list-group-item">Car Color:<%= car.color %></li>
-    <li class="list-group-item">Control Type:<%= car.type %></li>
-    <li class="list-group-item">Car Price:<%= car.price %></li>
-    <li class="list-group-item">Car Status:<%= car.status %></li>
-  </ul>
-</div>
-	<% if(currentUser && currentUser.dataEntry==="yes") { %>
-	<div class="editAnddelete mt-2">
-		<a href="/cars/<%= car._id %>/edit" class="btn btn-outline-warning">Edit Car</a>
-            <form class="deleteForm" action="/cars/<%= car._id %>?_method=DELETE" method="POST">
-			<button class="btn btn-outline-danger">Delete Car</button>
-	    </form>
-	</div>
-	<% } %>
-</div>
- 
 
-   <div class="row">
-	   <ul class="list-group mt-5 pb-5" style="width:900px; margin:auto">
-		<li class="list-group-item commentHeader">Comments: <a href="/cars/<%=car._id%>/comment/new" class="addComment">add new comment</a></li>
-	<% car.comments.forEach(function(comment){ %>
-  <li class="list-group-item">Created by: <%=comment.author.name.first%> <%=comment.author.name.last%> <p>
-	  <%= comment.text %>
-	  <% if(currentUser && comment.author.id.equals(currentUser._id)) { %>
-	  </p> 
-	  <a href="/cars/<%=car._id%>/comment/<%=comment._id%>/edit" class="btn btn-outline-warning">Edit</a>
-		<form class="deleteForm" action="/cars/<%=car._id%>/comment/<%=comment._id%>?_method=DELETE" method="POST">
-			<button class="btn btn-outline-danger">Delete</button>
-		</form>
-	    <% } %>
-		</li>
-		
-		<% }); %>
+    <div class="card infoCard" style="width:900px; margin:auto">
+      <div class="card-header">
+        Car Informaiton
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Model Year:<%= car.year %></li>
+        <li class="list-group-item">Car Color:<%= car.color %></li>
+        <li class="list-group-item">Control Type:<%= car.type %></li>
+        <li class="list-group-item">Car Price:<%= car.price %></li>
+        <li class="list-group-item">Car Status:<%= car.status %></li>
+      </ul>
+    </div>
+    <% if(currentUser && currentUser.dataEntry==="yes") { %>
+    <div class="editAnddelete mt-2">
+      <a href="/cars/<%= car._id %>/edit" class="btn btn-outline-warning">Edit Car</a>
+      <form class="deleteForm" action="/cars/<%= car._id %>?_method=DELETE" method="POST">
+        <button class="btn btn-outline-danger">Delete Car</button>
+      </form>
+    </div>
+    <% } %>
+  </div>
+
+
+  <div class="row">
+    <ul class="list-group mt-5 pb-5" style="width:900px; margin:auto">
+      <li class="list-group-item commentHeader">Comments: <a href="/cars/<%=car._id%>/comment/new"
+          class="addComment">add new comment</a></li>
+      <% car.comments.forEach(function(comment){ %>
+      <li class="list-group-item">Created by: <%=comment.author.name.first%> <%=comment.author.name.last%> <p>
+          <%= comment.text %>
+          <% if(currentUser && comment.author.id.equals(currentUser._id)) { %>
+        </p>
+        <a href="/cars/<%=car._id%>/comment/<%=comment._id%>/edit" class="btn btn-outline-warning">Edit</a>
+        <form class="deleteForm" action="/cars/<%=car._id%>/comment/<%=comment._id%>?_method=DELETE" method="POST">
+          <button class="btn btn-outline-danger">Delete</button>
+        </form>
+        <% } %>
+      </li>
+
+      <% }); %>
     </ul>
-	
-	</div>
-	
-	
+
+  </div>
+
+
 </div>
 
 
 
 
 <%- include("./partials/footer"); %>
-
